@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<meta charset="utf-8">
+<title>
+My Profile
+</title>
+<head>
+<style>
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: DarkSalmon;
+  color: white;
+}
+h1 {text-align: center;}
+p {text-align: center;}
+div {text-align: center;}
+table {
+  display: table;
+  border-collapse: separate;
+  border-spacing: 2px;
+  border-color: gray;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+</style>
+
+</head>
+<body>
+
+<h1>Dhiraj Jaiswal</h1>
+<p>Kolkata, West Bengal</p>
+<div><picture>
+  <source media="(max-width:2500px)" srcset="https://avatars3.githubusercontent.com/u/29003382?s=460&v=4">
+    <source media="(min-width:465px)" srcset="img_white_flower.jpg">
+  <img src="img_orange_flowers.jpg" alt="Flowers" style="width:auto;">
+</picture></div>
+<div>
+Have a look at my profile !
+</div>
+<br/>
+<br/>
+<div>
+<table id="myTable" >
+  <tr>
+    <th>Degree</th>
+    <th>University</th>
+    <th>Percentage</th>
+  </tr>
+  {% for da in data %} 
+  <tr>
+    <!-- <td>{{da}}</td> -->
+    <td>{{ da['degree'] }}</td>
+    <td>{{ da['university']}}</td>
+    <td>{{da['percentage']}}</td>
+  
+  </tr>
+  {% endfor %}
+  
+</table>
+
+</div>
+<br/>
+<br/>
+
+</body>
+<footer>
+  <p>Author: Dhiraj Jaiswal</p>
+  <p><a href="dhiraj.jaiswal96@gmail.com">Connect</a></p>
+</footer>
+</html> 
